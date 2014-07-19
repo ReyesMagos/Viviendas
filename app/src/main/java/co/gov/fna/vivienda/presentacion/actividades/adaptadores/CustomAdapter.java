@@ -18,11 +18,11 @@ import com.example.usuario.tryww.R;
 public class CustomAdapter extends BaseAdapter {
 
 	Context context;
-	List<OpcionesDashBoard> opciones;
+	List<OpcionesDashBoard> listaOpciones;
 
 	public CustomAdapter(Context context, List<OpcionesDashBoard> opciones) {
 		this.context = context;
-		this.opciones = opciones;
+		this.listaOpciones = opciones;
 	}
 
 	private class viewHolder {
@@ -38,12 +38,11 @@ public class CustomAdapter extends BaseAdapter {
 				.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 		if (convertView == null) {
 		
-				convertView = mInflater.inflate(R.layout.grid_celd, null);
+			convertView = mInflater.inflate(R.layout.grid_celd, null);
 			
 			holder = new viewHolder();
-
-
-
+            holder.txtOpcion= (TextView)convertView.findViewById(R.id.txtNombreOpcion);
+            holder.imagenOpcioes= (ImageView)convertView.findViewById(R.id.imagenOpcion);
 			convertView.setTag(holder);
 		} else {
 			holder = (viewHolder) convertView.getTag();
@@ -63,18 +62,18 @@ public class CustomAdapter extends BaseAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return opciones.size();
+		return listaOpciones.size();
 	}
 
 	@Override
-	public Object getItem(int arg0) {
+	public OpcionesDashBoard getItem(int arg0) {
 		// TODO Auto-generated method stub
-		return opciones.get(arg0);
+		return listaOpciones.get(arg0);
 	}
 
 	@Override
 	public long getItemId(int arg0) {
 		// TODO Auto-generated method stub
-		return opciones.indexOf(getItem(arg0));
+		return listaOpciones.indexOf(getItem(arg0));
 	}
 }

@@ -5,8 +5,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import co.gov.fna.contract.PersistanceContract;
-import co.gov.fna.contract.ViviendaContract;
+import co.gov.fna.persistencia.contract.PersistanceContract;
+import co.gov.fna.persistencia.contract.ViviendaContract;
+
 
 /**
  * Created by Alexis-PC on 19/07/2014.

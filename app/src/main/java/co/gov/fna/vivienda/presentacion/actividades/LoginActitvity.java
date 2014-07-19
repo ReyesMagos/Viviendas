@@ -2,6 +2,7 @@ package co.gov.fna.vivienda.presentacion.actividades;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -83,7 +84,9 @@ public class LoginActitvity extends Activity {
     }
 
     public void openDashBoar(View v){
-        controlador.changeToDashBoard();
+        //controlador.changeToDashBoard();
+        Intent i = new Intent(this, DashBoard.class);
+        startActivity(i);
     }
 
     public void logIn(View v) {

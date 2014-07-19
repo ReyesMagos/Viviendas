@@ -5,8 +5,9 @@ import android.content.Context;
 
 import java.util.List;
 
-import co.gov.fna.dao.IViviendaDAO;
-import co.gov.fna.okeda.persitencia.sqlite.AccessorSqliteOpenHelper;
+import co.gov.fna.persistencia.dao.IViviendaDAO;
+import co.gov.fna.persistencia.sqlite.AccessorSqliteOpenHelper;
+
 
 /**
  * Created by Alexis-PC on 19/07/2014.

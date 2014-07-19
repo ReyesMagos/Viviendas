@@ -38,7 +38,7 @@ public class ControladorDashBoard {
             opcionesDashBoard= new OpcionesDashBoard
                    (BitmapFactory.decodeResource(activity.getResources(), R.drawable.house),"Juego");
            listaOpcionesDashBoard.add(opcionesDashBoard);
-           CustomAdapter c = new CustomAdapter(activity, listaOpcionesDashBoard);
+           CustomAdapter c = new CustomAdapter(activity.getApplicationContext(), listaOpcionesDashBoard);
             activity.getGridOpciones().setAdapter(c);
 
        }

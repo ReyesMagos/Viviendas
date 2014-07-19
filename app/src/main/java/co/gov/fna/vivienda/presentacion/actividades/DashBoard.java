@@ -2,15 +2,23 @@ package co.gov.fna.vivienda.presentacion.actividades;
 
 
 import android.app.Activity;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridLayout;
 import android.widget.GridView;
 
-import com.example.usuario.tryww.*;
+import com.example.usuario.tryww.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import co.gov.fna.vivienda.controlador.ControladorDashBoard;
+import co.gov.fna.vivienda.modelo.entidades.OpcionesDashBoard;
+import co.gov.fna.vivienda.presentacion.actividades.adaptadores.CustomAdapter;
 
 public class DashBoard extends Activity{
 
@@ -21,9 +29,9 @@ public class DashBoard extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
-        gridOpciones= (GridView)findViewById(R.id.gridDashBoard);
+        gridOpciones= (GridView)findViewById(R.id.gridView);
         controlador = new ControladorDashBoard(this);
-
+        controlador.createGrid();
 
     }
 

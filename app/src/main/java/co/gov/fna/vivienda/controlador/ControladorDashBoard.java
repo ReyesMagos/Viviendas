@@ -1,11 +1,17 @@
 package co.gov.fna.vivienda.controlador;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
+import com.example.usuario.tryww.R;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import co.gov.fna.vivienda.modelo.entidades.OpcionesDashBoard;
 import co.gov.fna.vivienda.presentacion.actividades.DashBoard;
+import co.gov.fna.vivienda.presentacion.actividades.adaptadores.CustomAdapter;
 
 /**
  * Created by usuario on 19/07/14.
@@ -19,8 +25,22 @@ public class ControladorDashBoard {
     }
 
        public void createGrid(){
-           List<OpcionesDashBoard> listaOpcionesDashBoard();
-           OpcionesDashBoard opcionesDashBoard= new OpcionesDashBoard(null,"Viviendas");
+           List<OpcionesDashBoard> listaOpcionesDashBoard= new ArrayList<OpcionesDashBoard>();
+           OpcionesDashBoard opcionesDashBoard= new OpcionesDashBoard
+                   (BitmapFactory.decodeResource(activity.getResources(), R.drawable.house),"Busqueda Viviendas");
+           listaOpcionesDashBoard.add(opcionesDashBoard);
+            opcionesDashBoard= new OpcionesDashBoard
+                   (BitmapFactory.decodeResource(activity.getResources(), R.drawable.house),"Busqueda Credito");
+           listaOpcionesDashBoard.add(opcionesDashBoard);
+            opcionesDashBoard= new OpcionesDashBoard
+                   (BitmapFactory.decodeResource(activity.getResources(), R.drawable.house),"Simulador Crediticio");
+           listaOpcionesDashBoard.add(opcionesDashBoard);
+            opcionesDashBoard= new OpcionesDashBoard
+                   (BitmapFactory.decodeResource(activity.getResources(), R.drawable.house),"Juego");
+           listaOpcionesDashBoard.add(opcionesDashBoard);
+           CustomAdapter c = new CustomAdapter(activity, listaOpcionesDashBoard);
+            activity.getGridOpciones().setAdapter(c);
+
        }
 
     public DashBoard getActivity() {

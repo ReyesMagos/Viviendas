@@ -26,4 +26,11 @@
         android:onClick="singUp"
         android:id="@+id/btnSingUp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dash"
+        android:onClick="openDashBoar"
+        android:id="@+id/btnDashBoard" />
+
 </LinearLayout>

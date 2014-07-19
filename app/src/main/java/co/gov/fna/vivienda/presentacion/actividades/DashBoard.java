@@ -27,6 +27,13 @@ public class DashBoard extends Activity{
 
     }
 
+    public GridView getGridOpciones() {
+        return gridOpciones;
+    }
+
+    public void setGridOpciones(GridView gridOpciones) {
+        this.gridOpciones = gridOpciones;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

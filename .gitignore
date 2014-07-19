@@ -1,0 +1,10 @@
+
+*.xml
+
+*.xml
+
+.idea/misc.xml
+
+.idea/workspace.xml
+
+build/intermediates/model_data.bin

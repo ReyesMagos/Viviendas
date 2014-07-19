@@ -58,6 +58,11 @@ public class ControladorLoginActivity {
         }
     }
 
+    public void showMessage(String title, String menssage){
+        Utilities util= new Utilities(activity);
+        util.showAlertMessage(title,menssage);
+    }
+
     public void singUp(String userName, String password, String email, String mobile){
         final Utilities utilidades = new Utilities(activity);
         utilidades.showDialog("Alerta", "Registrando  Espere por Favor", false);

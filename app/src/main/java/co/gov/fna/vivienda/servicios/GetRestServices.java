@@ -29,7 +29,7 @@ public class GetRestServices extends AsyncTask<String,String, String> {
         this.url = url;
         if(activity instanceof LoginActitvity) {
             this.controlador = new ControladorLoginActivity((LoginActitvity) activity);
-            controlador.setGoingForViviendasSet(true);
+            //controlador.setGoingForViviendasSet(true);
         }
 
 

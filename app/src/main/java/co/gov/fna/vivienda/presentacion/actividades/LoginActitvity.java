@@ -30,7 +30,7 @@ public class LoginActitvity extends Activity {
     }
 
     public void getServices(View v){
-        controlador.setGoingForViviendasSet(true);
+        //controlador.setGoingForViviendasSet(true);
         controlador.getRestFullServices();
     }
 

@@ -15,6 +15,7 @@ import org.json.JSONObject;
 import co.gov.fna.vivienda.modelo.entidades.Usuario;
 import co.gov.fna.vivienda.presentacion.actividades.LoginActitvity;
 import co.gov.fna.vivienda.servicios.GetRestServices;
+import co.gov.fna.vivienda.utilidades.FactoryPuntoAtencion;
 import co.gov.fna.vivienda.utilidades.FactoryVivienda;
 import co.gov.fna.vivienda.utilidades.Utilities;
 
@@ -45,6 +46,15 @@ public class ControladorLoginActivity {
 
             }
 
+        }else{
+            try{
+                String[] puntosPropertysNames = activity.getResources().getStringArray(R.array.puntosatencion_properties_names);
+                JSONArray arregloJSON = objeto.getJSONArray("d");
+                FactoryPuntoAtencion factory = FactoryPuntoAtencion.getInstance();
+                factory.fillPuntoAtencion(arregloJSON, puntosPropertysNames);
+            }catch(JSONException e){
+
+            }
         }
     }
 

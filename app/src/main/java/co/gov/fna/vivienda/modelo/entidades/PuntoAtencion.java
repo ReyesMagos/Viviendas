@@ -29,6 +29,9 @@ public class PuntoAtencion {
         setCedulaCodigoBarras(cedulaCodigoBarras);
     }
 
+    public PuntoAtencion() {
+    }
+
     public String getTipoEntidad() {
         return tipoEntidad;
     }

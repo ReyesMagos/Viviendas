@@ -23,7 +23,7 @@ public class LoginActitvity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
         controlador = new ControladorLoginActivity(this);
-        Parse.initialize(this, "X8e1oqtAmnyAsEzf7hIi25JnxPmXrKbcJnHWVlXj", "heoiG6D3wLe0lWqKnVxeHPRMEGJYQxfJjydX3dNM");
+        Parse.initialize(this, getResources().getString(R.string.parseid), getResources().getString(R.string.parseid2));
 
         
 

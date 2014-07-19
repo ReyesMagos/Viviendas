@@ -25,6 +25,8 @@ public class LoginActitvity extends Activity {
         controlador = new ControladorLoginActivity(this);
         Parse.initialize(this, "X8e1oqtAmnyAsEzf7hIi25JnxPmXrKbcJnHWVlXj", "heoiG6D3wLe0lWqKnVxeHPRMEGJYQxfJjydX3dNM");
 
+        
+
     }
 
     public void getServices(View v){

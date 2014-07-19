@@ -1,17 +1,30 @@
 package co.gov.fna.vivienda.presentacion.actividades;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.example.usuario.tryww.R;
+import android.widget.GridLayout;
+import android.widget.GridView;
 
-public class DashBoard extends ActionBarActivity {
+import com.example.usuario.tryww.*;
+
+import co.gov.fna.vivienda.controlador.ControladorDashBoard;
+
+public class DashBoard extends Activity{
+
+    private GridView gridOpciones;
+    private ControladorDashBoard controlador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
+        gridOpciones= (GridView)findViewById(R.id.gridDashBoard);
+        controlador = new ControladorDashBoard(this);
+
+
     }
 
 

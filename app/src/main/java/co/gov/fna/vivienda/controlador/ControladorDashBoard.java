@@ -2,6 +2,7 @@ package co.gov.fna.vivienda.controlador;
 
 import android.app.Activity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import co.gov.fna.vivienda.modelo.entidades.OpcionesDashBoard;
@@ -19,7 +20,7 @@ public class ControladorDashBoard {
     }
 
        public void createGrid(){
-           List<OpcionesDashBoard> listaOpcionesDashBoard();
+           List<OpcionesDashBoard> listaOpcionesDashBoard= new ArrayList<OpcionesDashBoard>();
            OpcionesDashBoard opcionesDashBoard= new OpcionesDashBoard(null,"Viviendas");
        }
 

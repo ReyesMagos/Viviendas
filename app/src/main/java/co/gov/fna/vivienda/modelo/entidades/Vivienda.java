@@ -51,6 +51,15 @@ public class Vivienda {
     private String precioHasta;
     private String nombreConstructora;
     private String nombreProyecto;
+    private String partitionKey;
+
+    public String getPartitionKey() {
+        return partitionKey;
+    }
+
+    public void setPartitionKey(String partitionKey) {
+        this.partitionKey = partitionKey;
+    }
 
     public String getAplicaSubsidio() {
         return aplicaSubsidio;

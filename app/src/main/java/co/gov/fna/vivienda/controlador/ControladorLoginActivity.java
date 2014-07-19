@@ -1,7 +1,6 @@
 package co.gov.fna.vivienda.controlador;
 
 import com.example.usuario.tryww.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -41,6 +41,7 @@
         <item name="nombre_constructora">nombreconstructora</item>
         <item name="nombre_proyecto">nombreproyecto</item>
         <item name="nombre_representante_legal_constructora">nombrerepresentante_legalconstructora</item>
+        <item name="partition_key">PartitionKey</item>
         <item name="precio_desde">preciodesde</item>
         <item name="precio_hasta">preciohasta</item>
         <item name="telefono_contacto_constructora">telefonocontacto_constructora</item>

@@ -141,6 +141,8 @@ public class FactoryVivienda implements IFactoryVivienda {
                 j++;
                 v.setNombreRepresentanteLegalConstructora(object.getString(arrayPropertiesNames[j]));
                 j++;
+                v.setPartitionKey(object.getString(arrayPropertiesNames[j]));
+                j++;
                 v.setPrecioDesde(object.getString(arrayPropertiesNames[j]));
                 j++;
                 v.setPrecioHasta(object.getString(arrayPropertiesNames[j]));

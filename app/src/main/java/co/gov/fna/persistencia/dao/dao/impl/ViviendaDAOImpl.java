@@ -1,4 +1,4 @@
-package dao.dao.impl;
+package co.gov.fna.persistencia.dao.dao.impl;
 
 import android.content.ContentValues;
 import android.content.Context;

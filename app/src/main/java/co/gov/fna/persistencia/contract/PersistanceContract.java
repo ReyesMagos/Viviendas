@@ -1,4 +1,4 @@
-package contract;
+package co.gov.fna.persistencia.contract;
 
 /**
  * Created by Alexis-PC on 19/07/2014.

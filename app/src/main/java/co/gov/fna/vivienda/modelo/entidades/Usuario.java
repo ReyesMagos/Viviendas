@@ -1,5 +1,7 @@
 package co.gov.fna.vivienda.modelo.entidades;
 
+import com.parse.LogInCallback;
+import com.parse.ParseException;
 import com.parse.ParseUser;
 
 /**
@@ -11,11 +13,12 @@ public class Usuario {
     private String email;
     private String mobile;
 
-    public Usuario(ParseUser user, String mobile, String email) {
+    public Usuario(ParseUser user) {
         this.user = user;
-        this.mobile = mobile;
-        this.email = email;
+        this.mobile = user.getString("mobile");
+        this.email = user.getEmail();
     }
+
 
     public ParseUser getUser() {
         return user;

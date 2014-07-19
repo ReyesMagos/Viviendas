@@ -1,5 +1,6 @@
 package co.gov.fna.vivienda.controlador;
 
+import android.content.Intent;
 import android.util.Log;
 
 import com.example.usuario.tryww.R;
@@ -13,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import co.gov.fna.vivienda.modelo.entidades.Usuario;
+import co.gov.fna.vivienda.presentacion.actividades.DashBoard;
 import co.gov.fna.vivienda.presentacion.actividades.LoginActitvity;
 import co.gov.fna.vivienda.servicios.GetRestServices;
 import co.gov.fna.vivienda.utilidades.FactoryPuntoAtencion;
@@ -56,6 +58,11 @@ public class ControladorLoginActivity {
 
             }
         }
+    }
+
+    public void changeToDashBoard(){
+        Intent i = new Intent(activity, DashBoard.class);
+        activity.startActivity(i);
     }
 
     public void showMessage(String title, String menssage){

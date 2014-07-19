@@ -82,6 +82,10 @@ public class LoginActitvity extends Activity {
 
     }
 
+    public void openDashBoar(View v){
+        controlador.changeToDashBoard();
+    }
+
     public void logIn(View v) {
         controlador.loggin("oscarg798", "oscardx");
     }

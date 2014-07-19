@@ -34,12 +34,21 @@ public class LoginActitvity extends Activity {
         controlador.getRestFullServices();
     }
 
+    public void singUp(View v){
+        controlador.singUp("oscarg798","oscardx", "oscarg78@gmail.com","3113438370");
+    }
+
+    public void logIn(View v){
+        controlador.loggin("oscarg798","oscardx");
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.my, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

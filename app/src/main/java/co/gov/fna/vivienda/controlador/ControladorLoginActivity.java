@@ -1,9 +1,12 @@
 package co.gov.fna.vivienda.controlador;
 
+import android.util.Log;
+
 import com.example.usuario.tryww.R;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,13 +48,34 @@ public class ControladorLoginActivity {
         }
     }
 
-    public void singUp(){
-        
+    public void singUp(String userName, String password, String email, String mobile){
+        final Utilities utilidades = new Utilities(activity);
+        utilidades.showDialog("Alerta", "Registrando  Espere por Favor", false);
+        ParseUser user = new ParseUser();
+        user.setUsername(userName);
+        user.setPassword(password);
+        user.setEmail(email);
+        user.put("mobile",mobile);
+
+        user.signUpInBackground(new SignUpCallback() {
+            public void done(ParseException e) {
+                if (e == null) {
+                    utilidades.cancellDialog();
+                    utilidades.showAlertMessage("Registro Exitoso","Exito");
+
+                } else {
+                    // Sign up didn't succeed. Look at the ParseException
+                    // to figure out what went wrong
+                    Log.i("error",e.getMessage());
+                    utilidades.showAlertMessage("Error verifique sus datos","Error");
+                }
+            }
+        });
 
     }
 
     public void loggin(String user, String pass){
-        final Utilities utilidades = new Utilities(activity.getApplicationContext());
+        final Utilities utilidades = new Utilities(activity);
         utilidades.showDialog("Alerta", "iniciando Session Espere por Favor", false);
 
 
@@ -68,7 +92,7 @@ public class ControladorLoginActivity {
                     utilidades.showAlertMessage("Inicio Exitoso","Exito");
 
                 } else {
-
+                    utilidades.showAlertMessage("Error verifique sus datos","Error");
                 }
             }
         });

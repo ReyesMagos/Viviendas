@@ -1,9 +1,4 @@
-package contract;
-
-import java.util.List;
-
-import co.gov.fna.vivienda.modelo.entidades.Vivienda;
-import co.gov.fna.vivienda.utilidades.FactoryVivienda;
+package co.gov.fna.persistencia.contract;
 
 /**
  * Created by Alexis-PC on 19/07/2014.

@@ -1,4 +1,4 @@
-package okeda.persitencia.sqlite;
+package co.gov.fna.persistencia.sqlite;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

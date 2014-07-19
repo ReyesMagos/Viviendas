@@ -15,10 +15,10 @@ import android.widget.TextView;
  */
  public class Utilities {
 
-    private Activity actividad;
+    private Context actividad;
     private ProgressDialog dialog;
 
-    public Utilities(Context actividad) {
+    public Utilities(Activity actividad) {
         this.actividad = actividad;
     }
 

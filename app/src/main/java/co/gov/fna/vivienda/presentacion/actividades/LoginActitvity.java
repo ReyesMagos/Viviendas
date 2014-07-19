@@ -23,6 +23,7 @@ import co.gov.fna.vivienda.controlador.ControladorLoginActivity;
 public class LoginActitvity extends Activity {
     private ControladorLoginActivity controlador;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
